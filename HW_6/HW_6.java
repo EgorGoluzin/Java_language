@@ -1,5 +1,5 @@
 package  HW_6;
-public class Main
+public class HW_6
 {
     public static void main(String[] args) 
     {
