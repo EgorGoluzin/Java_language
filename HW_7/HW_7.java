@@ -19,12 +19,12 @@ public class HW7<T>
         this.value = value;
     }
 
-    public static <T> void swapValues(HW7<Wrapper<T>> obj1, HW7<Wrapper<T>> obj2) 
+    public static <T> void swapValues(HW7<Swapper<T>> obj1, HW7<Swapper<T>> obj2) 
     {
-        Wrapper<T> value1 = obj1.getValue();
-        Wrapper<T> value2 = obj2.getValue();
+        Swapper<T> value1 = obj1.getValue();
+        Swapper<T> value2 = obj2.getValue();
 
-        Wrapper<T> temp = new Wrapper<>(value1.get());
+        Swapper<T> temp = new Swapper<>(value1.get());
         value1.set(value2.get());
         value2.set(temp.get());
     }
@@ -32,8 +32,8 @@ public class HW7<T>
 
     public static void main(String[] args)
     {
-        HW7<Wrapper<Integer>> obj1 = new HW7<>(new Wrapper<>(5));
-        HW7<Wrapper<Integer>> obj2 = new HW7<>(new Wrapper<>(10));
+        HW7<Swapper<Integer>> obj1 = new HW7<>(new Swapper<>(5));
+        HW7<Swapper<Integer>> obj2 = new HW7<>(new Swapper<>(10));
 
         System.out.println("Values before swap:");
         System.out.println("obj1: " + obj1.getValue().get());
